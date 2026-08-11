@@ -26,10 +26,6 @@ body{
     overflow-x:hidden;
 }
 
-/* =========================
-   COLORS
-========================= */
-
 :root{
     --black:#050505;
     --gold:#d99d27;
@@ -40,9 +36,7 @@ body{
     --line:rgba(255,255,255,.12);
 }
 
-/* =========================
-   NAVIGATION
-========================= */
+/* NAVIGATION */
 
 nav{
     position:fixed;
@@ -67,14 +61,13 @@ nav{
 .logo{
     text-decoration:none;
     color:#fff;
-
     font-size:25px;
     font-weight:1000;
     letter-spacing:1px;
 }
 
 .logo span{
-    color:var(--gold);
+    color:var(--red);
     margin-left:5px;
 }
 
@@ -87,32 +80,28 @@ nav{
 .nav-links a{
     color:#aaa;
     text-decoration:none;
-
     font-size:12px;
     font-weight:800;
     letter-spacing:2px;
-
     transition:.25s;
 }
 
 .nav-links a:hover{
-    color:var(--gold);
+    color:var(--red);
 }
 
 .youtube-btn{
-    border:1px solid var(--gold);
+    border:1px solid var(--red);
     padding:12px 18px;
     color:#fff !important;
 }
 
 .youtube-btn:hover{
-    background:var(--gold);
-    color:#000 !important;
+    background:var(--red);
+    color:#fff !important;
 }
 
-/* =========================
-   HERO
-========================= */
+/* HERO */
 
 .hero{
     min-height:100vh;
@@ -129,10 +118,10 @@ nav{
             90deg,
             rgba(0,0,0,.96) 0%,
             rgba(0,0,0,.78) 38%,
-            rgba(0,0,0,.25) 75%,
-            rgba(0,0,0,.8) 100%
+            rgba(0,0,0,.30) 75%,
+            rgba(0,0,0,.82) 100%
         ),
-        url("49F565D2-846B-4EBD-82F3-778C2D2DA016.png");
+        url("https://raw.githubusercontent.com/KOIStrive/koistrive-website/main/49F565D2-846B-4EBD-82F3-778C2D2DA016.png");
 
     background-size:cover;
     background-position:center;
@@ -155,7 +144,6 @@ nav{
 .hero-content{
     position:relative;
     z-index:2;
-
     max-width:720px;
 }
 
@@ -164,7 +152,7 @@ nav{
     align-items:center;
     gap:15px;
 
-    color:#aaa;
+    color:var(--red);
 
     font-size:12px;
     font-weight:900;
@@ -177,23 +165,19 @@ nav{
     content:"";
     width:48px;
     height:3px;
-
-    background:var(--gold);
+    background:var(--red);
 }
 
 .hero h1{
     font-size:clamp(58px,9vw,125px);
-
     line-height:.82;
-
     font-weight:1000;
     letter-spacing:-6px;
-
     text-transform:uppercase;
 }
 
 .hero h1 span{
-    color:var(--gold);
+    color:var(--red);
 }
 
 .hero-text{
@@ -210,7 +194,6 @@ nav{
 .hero-buttons{
     display:flex;
     gap:15px;
-
     margin-top:35px;
 }
 
@@ -227,18 +210,18 @@ nav{
     font-weight:1000;
     letter-spacing:2px;
 
-    border:1px solid var(--gold);
+    border:1px solid var(--red);
 
     transition:.25s;
 }
 
 .btn-primary{
-    background:var(--gold);
-    color:#050505;
+    background:var(--red);
+    color:#fff;
 }
 
 .btn-primary:hover{
-    background:var(--gold-light);
+    background:#ff2c2c;
     transform:translateY(-3px);
 }
 
@@ -252,9 +235,7 @@ nav{
     color:#000;
 }
 
-/* =========================
-   STATS
-========================= */
+/* STATS */
 
 .stats{
     position:relative;
@@ -288,7 +269,7 @@ nav{
 .stat strong{
     display:block;
 
-    color:var(--gold);
+    color:var(--red);
 
     font-size:26px;
     font-weight:1000;
@@ -302,16 +283,14 @@ nav{
     letter-spacing:3px;
 }
 
-/* =========================
-   SECTION
-========================= */
+/* SECTIONS */
 
 section{
     padding:110px 7%;
 }
 
 .section-label{
-    color:var(--gold);
+    color:var(--red);
 
     font-size:11px;
     font-weight:1000;
@@ -332,12 +311,10 @@ section{
 }
 
 .section-title span{
-    color:var(--gold);
+    color:var(--red);
 }
 
-/* =========================
-   ABOUT
-========================= */
+/* ABOUT */
 
 .about{
     display:grid;
@@ -390,9 +367,7 @@ section{
     color:#fff;
 }
 
-/* =========================
-   LATEST VIDEO
-========================= */
+/* LATEST VIDEO */
 
 .latest{
     background:
@@ -426,9 +401,7 @@ section{
     border:0;
 }
 
-/* =========================
-   FEATURE
-========================= */
+/* FEATURE */
 
 .feature{
     display:grid;
@@ -459,9 +432,7 @@ section{
     line-height:1.8;
 }
 
-/* =========================
-   CTA
-========================= */
+/* CTA */
 
 .cta{
     text-align:center;
@@ -472,10 +443,10 @@ section{
 
     background:
         linear-gradient(
-            rgba(0,0,0,.7),
-            rgba(0,0,0,.92)
+            rgba(0,0,0,.72),
+            rgba(0,0,0,.94)
         ),
-        url("49F565D2-846B-4EBD-82F3-778C2D2DA016.png");
+        url("https://raw.githubusercontent.com/KOIStrive/koistrive-website/main/49F565D2-846B-4EBD-82F3-778C2D2DA016.png");
 
     background-size:cover;
     background-position:center;
@@ -505,9 +476,7 @@ section{
     line-height:1.7;
 }
 
-/* =========================
-   FOOTER
-========================= */
+/* FOOTER */
 
 footer{
     padding:45px 7%;
@@ -534,7 +503,7 @@ footer{
 }
 
 .footer-logo span{
-    color:var(--gold);
+    color:var(--red);
 }
 
 footer p{
@@ -544,15 +513,12 @@ footer p{
     letter-spacing:1px;
 }
 
-/* =========================
-   MOBILE
-========================= */
+/* MOBILE */
 
 @media(max-width:800px){
 
     nav{
         height:70px;
-
         padding:0 5%;
     }
 
@@ -570,7 +536,6 @@ footer p{
 
     .youtube-btn{
         padding:10px 12px;
-
         font-size:9px;
     }
 
@@ -584,7 +549,6 @@ footer p{
 
     .hero h1{
         font-size:65px;
-
         letter-spacing:-4px;
     }
 
@@ -594,23 +558,18 @@ footer p{
 
     .hero-buttons{
         flex-direction:column;
-
         max-width:270px;
     }
 
     .stats{
         margin:-30px 6% 0;
-
         grid-template-columns:1fr;
-
         padding:10px;
     }
 
     .stat{
         border-right:none;
-
         border-bottom:1px solid var(--line);
-
         padding:18px;
     }
 
@@ -625,7 +584,6 @@ footer p{
     .about,
     .feature{
         grid-template-columns:1fr;
-
         gap:40px;
     }
 
@@ -652,7 +610,6 @@ footer p{
 
     .footer-inner{
         flex-direction:column;
-
         text-align:center;
     }
 }
@@ -661,9 +618,7 @@ footer p{
 
 <body>
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+<!-- NAVIGATION -->
 
 <nav>
 
@@ -691,9 +646,7 @@ YOUTUBE ↗
 </nav>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <header class="hero" id="top">
 
@@ -709,7 +662,7 @@ WELCOME TO<br>
 </h1>
 
 <p class="hero-text">
-Gaming videos. Unhinged moments. Big adventures.
+Gaming videos. Crazy moments. Big adventures.
 Pull up, grab a controller, and STRIVE with us.
 </p>
 
@@ -733,9 +686,7 @@ SUBSCRIBE ↗
 </header>
 
 
-<!-- =========================
-     STATS
-========================= -->
+<!-- STATS -->
 
 <div class="stats">
 
@@ -757,9 +708,7 @@ SUBSCRIBE ↗
 </div>
 
 
-<!-- =========================
-     ABOUT
-========================= -->
+<!-- ABOUT -->
 
 <section id="about">
 
@@ -768,7 +717,7 @@ SUBSCRIBE ↗
 <div class="about-image">
 
 <img
-src="0F1072A0-4CD2-48AB-827F-D464D4B40809.png"
+src="https://raw.githubusercontent.com/KOIStrive/koistrive-website/main/0F1072A0-4CD2-48AB-827F-D464D4B40809.png"
 alt="KOI STRIVE koi artwork">
 
 </div>
@@ -806,9 +755,7 @@ decisions, we're here to experience it all.
 </section>
 
 
-<!-- =========================
-     LATEST VIDEO
-========================= -->
+<!-- LATEST VIDEO -->
 
 <section class="latest" id="latest">
 
@@ -835,9 +782,7 @@ allowfullscreen>
 </section>
 
 
-<!-- =========================
-     FEATURE
-========================= -->
+<!-- FEATURE -->
 
 <section id="feature">
 
@@ -881,7 +826,7 @@ ENTER THE CHANNEL
 <div class="feature-image">
 
 <img
-src="49F565D2-846B-4EBD-82F3-778C2D2DA016.png"
+src="https://raw.githubusercontent.com/KOIStrive/koistrive-website/main/49F565D2-846B-4EBD-82F3-778C2D2DA016.png"
 alt="KOI STRIVE red and white koi banner">
 
 </div>
@@ -891,9 +836,7 @@ alt="KOI STRIVE red and white koi banner">
 </section>
 
 
-<!-- =========================
-     CTA
-========================= -->
+<!-- CTA -->
 
 <section class="cta">
 
@@ -921,9 +864,7 @@ SUBSCRIBE TO KOI STRIVE ↗
 </section>
 
 
-<!-- =========================
-     FOOTER
-========================= -->
+<!-- FOOTER -->
 
 <footer>
 
