@@ -1,44 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="viewport"
-content="width=device-width, initial-scale=1.0">
+<title>KOI STRIVE — Gaming</title>
 
-<title>KOI STRIVE</title>
-
-<meta name="description"
-content="KOI STRIVE — Gaming. Chaos. Strive.">
-
-<link rel="preconnect"
-href="https://fonts.googleapis.com">
-
-<link rel="preconnect"
-href="https://fonts.gstatic.com"
-crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700;800;900&display=swap"
-rel="stylesheet">
+<meta name="description" content="KOI STRIVE — Gaming videos. Unhinged moments. Big adventures.">
 
 <style>
-
 *{
-box-sizing:border-box;
-margin:0;
-padding:0;
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
 html{
-scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-background:#050505;
-color:white;
-font-family:Inter,Arial,sans-serif;
-overflow-x:hidden;
+    background:#050505;
+    color:#fff;
+    font-family:Arial,Helvetica,sans-serif;
+    overflow-x:hidden;
+}
+
+/* =========================
+   COLORS
+========================= */
+
+:root{
+    --black:#050505;
+    --gold:#d99d27;
+    --gold-light:#f0bd45;
+    --red:#e32626;
+    --white:#f5f5f5;
+    --gray:#a5a5a5;
+    --line:rgba(255,255,255,.12);
 }
 
 /* =========================
@@ -46,59 +45,69 @@ overflow-x:hidden;
 ========================= */
 
 nav{
-position:fixed;
-top:0;
-left:0;
-width:100%;
-height:80px;
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:0 6%;
-background:rgba(0,0,0,.72);
-backdrop-filter:blur(15px);
-border-bottom:1px solid rgba(255,255,255,.08);
-z-index:100;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:78px;
+    z-index:1000;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+
+    padding:0 6%;
+
+    background:rgba(0,0,0,.82);
+    backdrop-filter:blur(14px);
+
+    border-bottom:1px solid var(--line);
 }
 
 .logo{
-font-family:Anton,sans-serif;
-font-size:28px;
-letter-spacing:2px;
-color:white;
-text-decoration:none;
+    text-decoration:none;
+    color:#fff;
+
+    font-size:25px;
+    font-weight:1000;
+    letter-spacing:1px;
 }
 
 .logo span{
-color:#e00000;
+    color:var(--gold);
+    margin-left:5px;
 }
 
 .nav-links{
-display:flex;
-gap:35px;
+    display:flex;
+    align-items:center;
+    gap:30px;
 }
 
 .nav-links a{
-color:#aaa;
-text-decoration:none;
-font-size:11px;
-font-weight:800;
-letter-spacing:2px;
-transition:.25s;
+    color:#aaa;
+    text-decoration:none;
+
+    font-size:12px;
+    font-weight:800;
+    letter-spacing:2px;
+
+    transition:.25s;
 }
 
 .nav-links a:hover{
-color:#e00000;
+    color:var(--gold);
 }
 
-.youtube{
-border:1px solid #e00000;
-padding:12px 18px;
-color:white!important;
+.youtube-btn{
+    border:1px solid var(--gold);
+    padding:12px 18px;
+    color:#fff !important;
 }
 
-.youtube:hover{
-background:#e00000;
+.youtube-btn:hover{
+    background:var(--gold);
+    color:#000 !important;
 }
 
 /* =========================
@@ -106,341 +115,224 @@ background:#e00000;
 ========================= */
 
 .hero{
-min-height:100vh;
-position:relative;
-display:flex;
-align-items:center;
-overflow:hidden;
+    min-height:100vh;
 
-background:
-linear-gradient(
-90deg,
-rgba(0,0,0,.95) 0%,
-rgba(0,0,0,.72) 42%,
-rgba(0,0,0,.25) 100%
-),
-url("koi-banner.jpg");
+    position:relative;
 
-background-size:cover;
-background-position:center;
+    display:flex;
+    align-items:center;
+
+    padding:130px 7% 80px;
+
+    background-image:
+        linear-gradient(
+            90deg,
+            rgba(0,0,0,.96) 0%,
+            rgba(0,0,0,.78) 38%,
+            rgba(0,0,0,.25) 75%,
+            rgba(0,0,0,.8) 100%
+        ),
+        url("49F565D2-846B-4EBD-82F3-778C2D2DA016.png");
+
+    background-size:cover;
+    background-position:center;
 }
 
-.hero:after{
-content:"";
-position:absolute;
-inset:0;
+.hero::after{
+    content:"";
+    position:absolute;
+    inset:0;
 
-background:
-radial-gradient(
-circle at 80% 45%,
-rgba(210,0,0,.18),
-transparent 35%
-);
+    background:
+        linear-gradient(
+            transparent 70%,
+            #050505 100%
+        );
 
-pointer-events:none;
+    pointer-events:none;
 }
 
 .hero-content{
-position:relative;
-z-index:5;
-padding:120px 7%;
-max-width:800px;
+    position:relative;
+    z-index:2;
+
+    max-width:720px;
 }
 
-.kicker{
-font-size:11px;
-font-weight:900;
-letter-spacing:5px;
-color:#e00000;
-margin-bottom:25px;
+.eyebrow{
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+    color:#aaa;
+
+    font-size:12px;
+    font-weight:900;
+    letter-spacing:5px;
+
+    margin-bottom:20px;
 }
 
-.kicker:before{
-content:"";
-display:inline-block;
-width:35px;
-height:2px;
-background:#e00000;
-margin-right:12px;
-vertical-align:middle;
+.eyebrow::before{
+    content:"";
+    width:48px;
+    height:3px;
+
+    background:var(--gold);
 }
 
 .hero h1{
-font-family:Anton,sans-serif;
-font-size:clamp(80px,13vw,190px);
-line-height:.78;
-letter-spacing:2px;
+    font-size:clamp(58px,9vw,125px);
+
+    line-height:.82;
+
+    font-weight:1000;
+    letter-spacing:-6px;
+
+    text-transform:uppercase;
 }
 
 .hero h1 span{
-color:#e00000;
-display:block;
+    color:var(--gold);
 }
 
-.hero-description{
-margin-top:35px;
-max-width:520px;
-color:#aaa;
-font-size:15px;
-line-height:1.8;
+.hero-text{
+    max-width:570px;
+
+    margin-top:30px;
+
+    color:#bcbcbc;
+
+    font-size:18px;
+    line-height:1.7;
 }
 
-.buttons{
-display:flex;
-gap:12px;
-margin-top:35px;
-flex-wrap:wrap;
+.hero-buttons{
+    display:flex;
+    gap:15px;
+
+    margin-top:35px;
 }
 
 .btn{
-padding:16px 25px;
-text-decoration:none;
-font-size:10px;
-font-weight:900;
-letter-spacing:2px;
-transition:.25s;
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:18px 28px;
+
+    text-decoration:none;
+
+    font-size:12px;
+    font-weight:1000;
+    letter-spacing:2px;
+
+    border:1px solid var(--gold);
+
+    transition:.25s;
 }
 
-.red{
-background:#d90000;
-color:white;
+.btn-primary{
+    background:var(--gold);
+    color:#050505;
 }
 
-.red:hover{
-background:#ff1b1b;
-transform:translateY(-3px);
+.btn-primary:hover{
+    background:var(--gold-light);
+    transform:translateY(-3px);
 }
 
-.dark{
-border:1px solid #444;
-color:white;
+.btn-secondary{
+    color:#fff;
+    background:rgba(0,0,0,.35);
 }
 
-.dark:hover{
-border-color:#e00000;
-}
-
-.scroll{
-position:absolute;
-bottom:30px;
-left:7%;
-font-size:9px;
-letter-spacing:4px;
-color:#666;
-}
-
-/* =========================
-   KOI ART
-========================= */
-
-.koi-art{
-padding:120px 7%;
-background:#050505;
-position:relative;
-}
-
-.koi-art-grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:70px;
-align-items:center;
-}
-
-.koi-image{
-width:100%;
-max-height:650px;
-object-fit:cover;
-border:1px solid #222;
-box-shadow:
-0 0 100px rgba(190,0,0,.12);
-}
-
-.art-copy h2{
-font-family:Anton,sans-serif;
-font-size:clamp(60px,8vw,110px);
-line-height:.85;
-}
-
-.art-copy h2 span{
-color:#e00000;
-}
-
-.art-copy p{
-margin-top:30px;
-max-width:500px;
-color:#999;
-line-height:1.9;
-font-size:14px;
-}
-
-.red-line{
-margin-top:35px;
-width:80px;
-height:3px;
-background:#e00000;
+.btn-secondary:hover{
+    background:#fff;
+    color:#000;
 }
 
 /* =========================
-   LATEST VIDEO
+   STATS
 ========================= */
 
-.latest{
-padding:120px 7%;
-border-top:1px solid #181818;
+.stats{
+    position:relative;
+    z-index:5;
+
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+
+    max-width:1000px;
+
+    margin:-45px auto 0;
+
+    padding:25px;
+
+    background:#0a0a0a;
+
+    border:1px solid var(--line);
+}
+
+.stat{
+    text-align:center;
+    padding:10px;
+
+    border-right:1px solid var(--line);
+}
+
+.stat:last-child{
+    border-right:none;
+}
+
+.stat strong{
+    display:block;
+
+    color:var(--gold);
+
+    font-size:26px;
+    font-weight:1000;
+}
+
+.stat span{
+    color:#777;
+
+    font-size:10px;
+    font-weight:800;
+    letter-spacing:3px;
+}
+
+/* =========================
+   SECTION
+========================= */
+
+section{
+    padding:110px 7%;
 }
 
 .section-label{
-font-size:10px;
-font-weight:900;
-letter-spacing:4px;
-color:#e00000;
-margin-bottom:18px;
+    color:var(--gold);
+
+    font-size:11px;
+    font-weight:1000;
+    letter-spacing:4px;
+
+    margin-bottom:14px;
 }
 
-.latest h2{
-font-family:Anton,sans-serif;
-font-size:clamp(60px,8vw,110px);
-line-height:.85;
+.section-title{
+    font-size:clamp(38px,6vw,70px);
+
+    line-height:.95;
+
+    font-weight:1000;
+    text-transform:uppercase;
+
+    letter-spacing:-2px;
 }
 
-.latest h2 span{
-color:#e00000;
-}
-
-.video-card{
-margin-top:50px;
-display:grid;
-grid-template-columns:1.5fr .5fr;
-background:#0b0b0b;
-border:1px solid #252525;
-}
-
-.video-thumbnail{
-position:relative;
-aspect-ratio:16/9;
-overflow:hidden;
-}
-
-.video-thumbnail img{
-width:100%;
-height:100%;
-object-fit:cover;
-transition:.5s;
-}
-
-.video-thumbnail:hover img{
-transform:scale(1.04);
-}
-
-.play{
-position:absolute;
-left:50%;
-top:50%;
-transform:translate(-50%,-50%);
-width:70px;
-height:70px;
-border-radius:50%;
-background:#e00000;
-display:grid;
-place-items:center;
-font-size:20px;
-}
-
-.video-info{
-padding:40px;
-display:flex;
-flex-direction:column;
-justify-content:center;
-}
-
-.video-info small{
-color:#e00000;
-font-weight:900;
-letter-spacing:3px;
-font-size:9px;
-}
-
-.video-info h3{
-font-family:Anton,sans-serif;
-font-size:38px;
-line-height:.95;
-margin:15px 0;
-}
-
-.video-info p{
-color:#777;
-font-size:12px;
-line-height:1.7;
-margin-bottom:25px;
-}
-
-/* =========================
-   GAMES
-========================= */
-
-.games{
-padding:120px 7%;
-background:
-linear-gradient(
-rgba(0,0,0,.93),
-rgba(0,0,0,.93)
-),
-url("koi-art.jpg");
-
-background-size:cover;
-background-position:center;
-background-attachment:fixed;
-}
-
-.games h2{
-font-family:Anton,sans-serif;
-font-size:clamp(60px,8vw,110px);
-line-height:.85;
-}
-
-.games h2 span{
-color:#e00000;
-}
-
-.game-grid{
-margin-top:55px;
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:12px;
-}
-
-.game{
-min-height:240px;
-padding:25px;
-border:1px solid #272727;
-background:rgba(0,0,0,.65);
-display:flex;
-flex-direction:column;
-justify-content:flex-end;
-transition:.3s;
-}
-
-.game:hover{
-border-color:#e00000;
-transform:translateY(-5px);
-}
-
-.game-number{
-color:#e00000;
-font-weight:900;
-font-size:10px;
-margin-bottom:auto;
-}
-
-.game h3{
-font-family:Anton,sans-serif;
-font-size:35px;
-}
-
-.game p{
-font-size:11px;
-color:#777;
-line-height:1.6;
+.section-title span{
+    color:var(--gold);
 }
 
 /* =========================
@@ -448,91 +340,169 @@ line-height:1.6;
 ========================= */
 
 .about{
-padding:120px 7%;
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:100px;
-border-top:1px solid #181818;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+
+    align-items:center;
 }
 
-.about h2{
-font-family:Anton,sans-serif;
-font-size:clamp(60px,8vw,110px);
-line-height:.85;
+.about-image{
+    position:relative;
 }
 
-.about h2 span{
-color:#e00000;
+.about-image img{
+    display:block;
+
+    width:100%;
+
+    border:1px solid var(--line);
+
+    filter:saturate(1.08);
+}
+
+.about-image::before{
+    content:"";
+
+    position:absolute;
+
+    width:80%;
+    height:80%;
+
+    left:-15px;
+    bottom:-15px;
+
+    border:1px solid var(--red);
+
+    z-index:-1;
 }
 
 .about-text{
-color:#999;
-line-height:1.9;
-font-size:14px;
+    color:#aaa;
+
+    font-size:17px;
+    line-height:1.8;
+
+    margin-top:25px;
 }
 
-.about-text p{
-margin-bottom:25px;
-}
-
-.signature{
-font-family:Anton,sans-serif;
-font-size:22px;
-color:#e00000;
-letter-spacing:3px;
+.about-text strong{
+    color:#fff;
 }
 
 /* =========================
-   FINAL CTA
+   LATEST VIDEO
 ========================= */
 
-.join{
-min-height:70vh;
-display:flex;
-flex-direction:column;
-align-items:center;
-justify-content:center;
-text-align:center;
-position:relative;
-overflow:hidden;
-
-background:
-linear-gradient(
-rgba(0,0,0,.78),
-rgba(0,0,0,.9)
-),
-url("koi-banner.jpg");
-
-background-size:cover;
-background-position:center;
+.latest{
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(227,38,38,.14),
+            transparent 30%
+        ),
+        #080808;
 }
 
-.join:before{
-content:"KOI";
-position:absolute;
-font-family:Anton,sans-serif;
-font-size:35vw;
-color:rgba(255,0,0,.035);
+.video-wrap{
+    margin-top:45px;
+
+    max-width:1000px;
+
+    border:1px solid var(--line);
+
+    background:#000;
+
+    box-shadow:
+        0 20px 80px rgba(0,0,0,.5);
 }
 
-.join-content{
-position:relative;
-z-index:2;
+.video-wrap iframe{
+    display:block;
+
+    width:100%;
+    aspect-ratio:16/9;
+
+    border:0;
 }
 
-.join h2{
-font-family:Anton,sans-serif;
-font-size:clamp(75px,11vw,160px);
-line-height:.8;
+/* =========================
+   FEATURE
+========================= */
+
+.feature{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+
+    gap:60px;
+
+    align-items:center;
 }
 
-.join h2 span{
-color:#e00000;
+.feature-image{
+    position:relative;
 }
 
-.join p{
-margin:30px 0;
-color:#999;
+.feature-image img{
+    width:100%;
+    display:block;
+
+    border:1px solid var(--line);
+}
+
+.feature-content p{
+    margin-top:25px;
+
+    color:#aaa;
+
+    font-size:17px;
+    line-height:1.8;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.cta{
+    text-align:center;
+
+    position:relative;
+
+    padding:140px 7%;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,.7),
+            rgba(0,0,0,.92)
+        ),
+        url("49F565D2-846B-4EBD-82F3-778C2D2DA016.png");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.cta h2{
+    font-size:clamp(45px,7vw,90px);
+
+    font-weight:1000;
+
+    text-transform:uppercase;
+
+    letter-spacing:-3px;
+}
+
+.cta h2 span{
+    color:var(--red);
+}
+
+.cta p{
+    max-width:600px;
+
+    margin:20px auto 35px;
+
+    color:#aaa;
+
+    line-height:1.7;
 }
 
 /* =========================
@@ -540,233 +510,294 @@ color:#999;
 ========================= */
 
 footer{
-padding:35px 7%;
-border-top:1px solid #222;
-display:flex;
-justify-content:space-between;
-align-items:center;
-background:#030303;
+    padding:45px 7%;
+
+    border-top:1px solid var(--line);
+
+    background:#030303;
+}
+
+.footer-inner{
+    display:flex;
+
+    align-items:center;
+    justify-content:space-between;
+
+    gap:20px;
+}
+
+.footer-logo{
+    color:#fff;
+
+    font-size:22px;
+    font-weight:1000;
+}
+
+.footer-logo span{
+    color:var(--gold);
 }
 
 footer p{
-font-size:10px;
-color:#555;
-letter-spacing:1px;
-}
+    color:#666;
 
-footer a{
-color:#e00000;
-text-decoration:none;
-font-size:10px;
-font-weight:900;
-letter-spacing:2px;
+    font-size:11px;
+    letter-spacing:1px;
 }
 
 /* =========================
    MOBILE
 ========================= */
 
-@media(max-width:850px){
+@media(max-width:800px){
 
-nav{
-padding:0 22px;
+    nav{
+        height:70px;
+
+        padding:0 5%;
+    }
+
+    .logo{
+        font-size:21px;
+    }
+
+    .nav-links{
+        gap:10px;
+    }
+
+    .nav-links a:not(.youtube-btn){
+        display:none;
+    }
+
+    .youtube-btn{
+        padding:10px 12px;
+
+        font-size:9px;
+    }
+
+    .hero{
+        min-height:850px;
+
+        padding:120px 6% 80px;
+
+        background-position:58% center;
+    }
+
+    .hero h1{
+        font-size:65px;
+
+        letter-spacing:-4px;
+    }
+
+    .hero-text{
+        font-size:16px;
+    }
+
+    .hero-buttons{
+        flex-direction:column;
+
+        max-width:270px;
+    }
+
+    .stats{
+        margin:-30px 6% 0;
+
+        grid-template-columns:1fr;
+
+        padding:10px;
+    }
+
+    .stat{
+        border-right:none;
+
+        border-bottom:1px solid var(--line);
+
+        padding:18px;
+    }
+
+    .stat:last-child{
+        border-bottom:none;
+    }
+
+    section{
+        padding:80px 6%;
+    }
+
+    .about,
+    .feature{
+        grid-template-columns:1fr;
+
+        gap:40px;
+    }
+
+    .about{
+        display:flex;
+        flex-direction:column-reverse;
+    }
+
+    .section-title{
+        font-size:48px;
+    }
+
+    .video-wrap{
+        margin-top:30px;
+    }
+
+    .cta{
+        padding:100px 6%;
+    }
+
+    .cta h2{
+        font-size:52px;
+    }
+
+    .footer-inner{
+        flex-direction:column;
+
+        text-align:center;
+    }
 }
-
-.nav-links{
-display:none;
-}
-
-.hero{
-min-height:100vh;
-background-position:62% center;
-}
-
-.hero-content{
-padding:130px 28px 80px;
-}
-
-.hero h1{
-font-size:76px;
-}
-
-.hero-description{
-font-size:14px;
-}
-
-.koi-art-grid{
-grid-template-columns:1fr;
-gap:45px;
-}
-
-.koi-image{
-max-height:none;
-}
-
-.video-card{
-grid-template-columns:1fr;
-}
-
-.video-info{
-padding:30px;
-}
-
-.game-grid{
-grid-template-columns:1fr 1fr;
-}
-
-.about{
-grid-template-columns:1fr;
-gap:45px;
-}
-
-}
-
-@media(max-width:500px){
-
-.hero h1{
-font-size:68px;
-}
-
-.game-grid{
-grid-template-columns:1fr;
-}
-
-.game{
-min-height:190px;
-}
-
-.join h2{
-font-size:75px;
-}
-
-footer{
-flex-direction:column;
-align-items:flex-start;
-gap:18px;
-}
-
-}
-
 </style>
-
 </head>
-
 
 <body>
 
-
-<!-- NAVIGATION -->
+<!-- =========================
+     NAVIGATION
+========================= -->
 
 <nav>
 
-<a class="logo" href="#">
-KOI <span>STRIVE</span>
+<a class="logo" href="#top">
+    KOI <span>STRIVE</span>
 </a>
 
 <div class="nav-links">
 
-<a href="#latest">LATEST</a>
-<a href="#games">GAMES</a>
 <a href="#about">ABOUT</a>
 
-</div>
+<a href="#latest">LATEST</a>
 
-<a class="youtube"
-href="https://youtube.com/@koistrive-m4bl"
+<a href="#feature">THE KOI</a>
+
+<a
+class="youtube-btn"
+href="https://youtube.com/@koistrive-m4bl?si=Ys8Gnmtv5Yq04iKd"
 target="_blank">
-
 YOUTUBE ↗
-
 </a>
+
+</div>
 
 </nav>
 
 
-<!-- HERO -->
+<!-- =========================
+     HERO
+========================= -->
 
-<section class="hero">
+<header class="hero" id="top">
 
 <div class="hero-content">
 
-<div class="kicker">
-THE STRIVE BEGINS
+<div class="eyebrow">
+THE GRIND STARTS HERE
 </div>
 
 <h1>
-KOI
-<span>STRIVE</span>
+WELCOME TO<br>
+<span>KOI STRIVE.</span>
 </h1>
 
-<p class="hero-description">
-
-Gaming videos. Crazy moments.
-Big adventures.
-
-Welcome to the world of KOI STRIVE.
-
+<p class="hero-text">
+Gaming videos. Unhinged moments. Big adventures.
+Pull up, grab a controller, and STRIVE with us.
 </p>
 
-<div class="buttons">
+<div class="hero-buttons">
 
-<a class="btn red" href="#latest">
-WATCH THE LATEST
+<a class="btn btn-primary" href="#latest">
+WATCH LATEST
 </a>
 
 <a
-class="btn dark"
-href="https://youtube.com/@koistrive-m4bl"
+class="btn btn-secondary"
+href="https://youtube.com/@koistrive-m4bl?si=Ys8Gnmtv5Yq04iKd"
 target="_blank">
-
 SUBSCRIBE ↗
-
 </a>
 
 </div>
 
 </div>
 
-<div class="scroll">
-SCROLL TO ENTER THE STRIVE ↓
+</header>
+
+
+<!-- =========================
+     STATS
+========================= -->
+
+<div class="stats">
+
+<div class="stat">
+<strong>01</strong>
+<span>LATEST DROP</span>
 </div>
 
-</section>
+<div class="stat">
+<strong>100%</strong>
+<span>STRIVE</span>
+</div>
+
+<div class="stat">
+<strong>∞</strong>
+<span>MORE TO COME</span>
+</div>
+
+</div>
 
 
-<!-- KOI ART -->
+<!-- =========================
+     ABOUT
+========================= -->
 
-<section class="koi-art">
+<section id="about">
 
-<div class="koi-art-grid">
+<div class="about">
+
+<div class="about-image">
 
 <img
-class="koi-image"
-src="koi-art.jpg"
+src="0F1072A0-4CD2-48AB-827F-D464D4B40809.png"
 alt="KOI STRIVE koi artwork">
 
-<div class="art-copy">
-
-<div class="section-label">
-THE SYMBOL
 </div>
 
-<h2>
-TWO KOI.<br>
-ONE <span>STRIVE.</span>
+<div>
+
+<div class="section-label">
+WHO WE ARE
+</div>
+
+<h2 class="section-title">
+WE DON'T<br>
+JUST <span>PLAY.</span>
 </h2>
 
-<p>
+<p class="about-text">
+<strong>KOI STRIVE</strong> is about gaming,
+chaos, competition, laughs, and creating moments
+worth remembering.
 
-The koi represents movement.
-Persistence. Growth.
+<br><br>
 
-No matter how difficult the current gets,
-you keep moving forward.
+From insane victories to absolutely terrible
+decisions, we're here to experience it all.
 
-That's KOI STRIVE.
+<br><br>
 
+<strong>The grind never stops.</strong>
 </p>
-
-<div class="red-line"></div>
 
 </div>
 
@@ -775,227 +806,147 @@ That's KOI STRIVE.
 </section>
 
 
-<!-- LATEST VIDEO -->
+<!-- =========================
+     LATEST VIDEO
+========================= -->
 
-<section id="latest" class="latest">
+<section class="latest" id="latest">
 
 <div class="section-label">
 LATEST DROP
 </div>
 
-<h2>
-EARTH IS<br>
-<span>COOKED.</span>
+<h2 class="section-title">
+WATCH THE<br>
+<span>LATEST.</span>
 </h2>
 
-<div class="video-card">
+<div class="video-wrap">
+
+<iframe
+src="https://www.youtube.com/embed/OiLu_pBrxUs"
+title="KOI STRIVE Latest Video"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+allowfullscreen>
+</iframe>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     FEATURE
+========================= -->
+
+<section id="feature">
+
+<div class="feature">
+
+<div class="feature-content">
+
+<div class="section-label">
+THE KOI
+</div>
+
+<h2 class="section-title">
+TWO SIDES.<br>
+ONE <span>STRIVE.</span>
+</h2>
+
+<p>
+The koi represents the energy behind KOI STRIVE:
+movement, persistence, balance, and the willingness
+to keep pushing forward.
+
+<br><br>
+
+Whether we're taking on a new game, chasing a win,
+or completely losing our minds in the process —
+
+<strong>we STRIVE.</strong>
+</p>
+
+<br>
 
 <a
-class="video-thumbnail"
-href="https://youtu.be/OiLu_pBrxUs"
+class="btn btn-primary"
+href="https://youtube.com/@koistrive-m4bl?si=Ys8Gnmtv5Yq04iKd"
 target="_blank">
+ENTER THE CHANNEL
+</a>
+
+</div>
+
+<div class="feature-image">
 
 <img
-src="https://img.youtube.com/vi/OiLu_pBrxUs/maxresdefault.jpg"
-alt="KOI STRIVE Directive 8020 video">
+src="49F565D2-846B-4EBD-82F3-778C2D2DA016.png"
+alt="KOI STRIVE red and white koi banner">
 
-<div class="play">
-▶
 </div>
 
-</a>
+</div>
 
-<div class="video-info">
+</section>
 
-<small>
-DIRECTIVE 8020 • PART 1
-</small>
 
-<h3>
-WE SAVING THE EARTH!!
-</h3>
+<!-- =========================
+     CTA
+========================= -->
+
+<section class="cta">
+
+<div class="section-label">
+READY?
+</div>
+
+<h2>
+COME <span>STRIVE</span><br>
+WITH US.
+</h2>
 
 <p>
-
-The newest KOI STRIVE adventure.
-The Earth is cooked.
-
-Now let's see if we can survive.
-
+New videos. New games. New chaos.
+Subscribe to KOI STRIVE and join the grind.
 </p>
 
 <a
-class="btn red"
-href="https://youtu.be/OiLu_pBrxUs"
+class="btn btn-primary"
+href="https://youtube.com/@koistrive-m4bl?si=Ys8Gnmtv5Yq04iKd"
 target="_blank">
-
-WATCH VIDEO ↗
-
-</a>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- GAMES -->
-
-<section id="games" class="games">
-
-<div class="section-label">
-THE ROTATION
-</div>
-
-<h2>
-WHAT ARE WE<br>
-<span>PLAYING?</span>
-</h2>
-
-<div class="game-grid">
-
-<div class="game">
-<div class="game-number">01</div>
-<h3>HORROR</h3>
-<p>
-Fear, chaos and terrible decisions.
-</p>
-</div>
-
-<div class="game">
-<div class="game-number">02</div>
-<h3>ACTION</h3>
-<p>
-Big fights. Big moments.
-</p>
-</div>
-
-<div class="game">
-<div class="game-number">03</div>
-<h3>CO-OP</h3>
-<p>
-The squad enters. Chaos follows.
-</p>
-</div>
-
-<div class="game">
-<div class="game-number">04</div>
-<h3>WILDCARD</h3>
-<p>
-Whatever looks fun next.
-</p>
-</div>
-
-</div>
-
-</section>
-
-
-<!-- ABOUT -->
-
-<section id="about" class="about">
-
-<div>
-
-<div class="section-label">
-THE CHANNEL
-</div>
-
-<h2>
-MORE THAN<br>
-<span>GAMING.</span>
-</h2>
-
-</div>
-
-<div class="about-text">
-
-<p>
-
-KOI STRIVE is a gaming channel built around
-the moments that make games unforgettable.
-
-</p>
-
-<p>
-
-Funny moments.
-Intense battles.
-Crazy adventures.
-Friends.
-Stories.
-
-Whatever happens next —
-
-we STRIVE.
-
-</p>
-
-<div class="signature">
-KOI STRIVE
-</div>
-
-</div>
-
-</section>
-
-
-<!-- JOIN -->
-
-<section class="join">
-
-<div class="join-content">
-
-<div class="section-label">
-THE NEXT ADVENTURE STARTS HERE
-</div>
-
-<h2>
-JOIN THE<br>
-<span>STRIVE.</span>
-</h2>
-
-<p>
-Subscribe and become part of the journey.
-</p>
-
-<a
-class="btn red"
-href="https://youtube.com/@koistrive-m4bl"
-target="_blank">
-
 SUBSCRIBE TO KOI STRIVE ↗
-
 </a>
-
-</div>
 
 </section>
 
 
-<!-- FOOTER -->
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-<a class="logo" href="#">
+<div class="footer-inner">
+
+<div class="footer-logo">
 KOI <span>STRIVE</span>
-</a>
+</div>
 
 <p>
-© 2026 KOI STRIVE
+© 2026 KOI STRIVE — THE GRIND NEVER STOPS.
 </p>
 
 <a
-href="https://youtube.com/@koistrive-m4bl"
+class="btn btn-secondary"
+href="https://youtube.com/@koistrive-m4bl?si=Ys8Gnmtv5Yq04iKd"
 target="_blank">
-
 YOUTUBE ↗
-
 </a>
 
-</footer>
+</div>
 
+</footer>
 
 </body>
 </html>
